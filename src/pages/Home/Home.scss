@@ -1,0 +1,47 @@
+.my-masonry-grid {
+  display: flex;
+  margin-left: -20px;
+}
+.my-masonry-grid_column {
+  border-left: 20px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+
+/* Style your items */
+.my-masonry-grid_column > a {
+  text-align: center;
+  background: #ddd;
+  padding: 20px;
+  display: block;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    color: #555;
+    text-decoration: underline;
+    background: #eceaea;
+    img {
+      transform: scale(1.025);
+      transition: all 0.3s ease-in-out;
+    }
+    h2 {
+      color: #555;
+    }
+  }
+}
+
+.character-list {
+  margin: 0 2% 20px;
+  position: relative;
+  text-align: center;
+  min-height: 90vh;
+  .load-button-wrapper {
+    color: #eceaea;
+    padding: 20px;
+    text-align: center;
+  }
+}

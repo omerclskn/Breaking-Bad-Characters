@@ -1,0 +1,170 @@
+.cube-wrapper {
+  position: relative;
+  top: 10px;
+  height: 100px;
+  width: 100px;
+  margin: 0 0 60px 500px;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+  transform: scale(0.4);
+}
+
+#cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: cube 10s ease-out 1s infinite normal;
+}
+
+.side {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(
+    145deg,
+    rgba(120, 193, 146, 1),
+    rgba(16, 45, 9, 1)
+  );
+  color: #fff;
+  border-radius: 0px;
+  border: 3px solid #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+#side1 {
+  transform: translateZ(100px);
+}
+
+#side2 {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+#side3 {
+  transform: rotateX(-90deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+#side4 {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+#side5 {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+#side6 {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.element {
+  font-size: 120px;
+  line-height: 200px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(#000000, 0.2);
+}
+
+.topleft {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topright {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bottom1 {
+  position: absolute;
+  left: 6px;
+  top: 140px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.bottom2 {
+  position: absolute;
+  left: 6px;
+  top: 168px;
+  font-size: 18px;
+}
+
+.text {
+  color: #fff;
+  font-size: 135px;
+  position: absolute;
+  top: 0;
+  left: 240px;
+  font-family: Georgia, serif;
+  opacity: 0;
+}
+
+.reacking {
+  animation: textone 10s ease-out 1s infinite normal;
+}
+
+.dlet {
+  animation: texttwo 10s ease-out 1s infinite normal;
+}
+
+@keyframes cube {
+  0% {
+    transform: rotateX(0deg);
+  }
+  20%,
+  40% {
+    transform: rotateY(180deg);
+  }
+  60%,
+  80% {
+    transform: rotateX(90deg);
+  }
+  95%,
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes textone {
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 90;
+  }
+  60%,
+  80% {
+    opacity: 0;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes texttwo {
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 90;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}

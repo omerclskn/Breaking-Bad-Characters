@@ -1,0 +1,33 @@
+.quote-wrapper {
+  position: relative;
+  margin: 0 2%;
+
+  .quote-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    li {
+      padding: 10px;
+      color: #eceaea;
+      .quote-title {
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+      .quote-word {
+        font-style: italic;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .quote-info {
+    color: #eceaea;
+    text-align: center;
+    padding: 30px;
+  }
+}

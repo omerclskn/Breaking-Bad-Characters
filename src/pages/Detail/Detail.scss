@@ -1,0 +1,66 @@
+.character-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(236, 234, 234, 0.5);
+  margin: 20px 200px;
+  border-radius: 10px;
+  min-height: 450px;
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+  .character-card {
+    display: flex;
+    align-items: center;
+    padding: 0 30px 20px;
+    height: 100%;
+    gap: 70px;
+    img {
+      border-radius: 30%;
+      width: 300px;
+      height: auto;
+      transition: 0.6s;
+      margin-bottom: 1em;
+    }
+    img:hover {
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.6s;
+    }
+    .death-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    .character-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    .death-count {
+      position: absolute;
+      display: flex;
+      right: 40px;
+      top: 100px;
+      align-items: center;
+      p:first-child {
+        font-size: 1.5rem;
+        margin-right: 5px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        svg {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
